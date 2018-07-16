@@ -1,0 +1,111 @@
+<html>
+<head>
+	  <title>Spring Boot - Angularjs Example</title>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <script src="/js/angular.min.js"></script>
+	  <script src="/controllers/controller.js"></script>
+	  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+	  
+</head>
+<body>
+ 
+<div class="container" ng-app="app">
+ 
+	<h3 style="color:blue">Campagne de Recensement</h3>
+	
+	<div ng-controller="postcontroller as vm">
+		<form name="customerForm" ng-submit="vm.submitForm()">
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		   		<div class="form-group">
+				<label class="control-label col-sm-2" for="nomID">Noms:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="nom" id="nomID"
+						placeholder="Enter nom" ng-model="vm.personne.nom"/>
+				</div>
+			</div>
+		   </div>
+		   
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		   		<div class="form-group">
+				<label class="control-label col-sm-2" for="prenomID">Prenoms:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="prenom" id="prenomID"
+						placeholder="Enter prenoms" ng-model="vm.personne.prenom"/>
+				</div>
+				</div>
+		   </div>
+		   
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		      	<div class="form-group">
+				<label class="control-label col-sm-2" for="dateNaissanceID">dateNaissance:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="dateNaissance" id="dateNaissanceID"
+						placeholder="Enter dateNaissance" ng-model="vm.personne.dateNaissance"/>
+				</div>
+				</div>
+		     </div>
+		     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		     		<div class="form-group">
+						<label class="control-label col-sm-2" for="lieuNaissanceID">lieuNaissance:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="lieuNaissance" id="lieuNaissanceID"
+								placeholder="Enter lieuNaissance" ng-model="vm.personne.lieuNaissance"/>
+						</div>
+					</div>
+		     </div>
+		   </div>
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		   		<div class="form-group">
+				<label class="control-label col-sm-2" for="lastnameID">nationalite:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" name="nationalite" id="nationaliteID"
+						placeholder="Enter LastName" ng-model="vm.personne.nationalite"/>
+				</div>
+				</div>
+		   </div>
+		   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		     		<div class="form-group">
+						<label class="control-label col-sm-2" for="telephoneID">telephone:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" name="telephone" id="telephoneID"
+								placeholder="Enter telephone" ng-model="vm.personne.telephone"/>
+						</div>
+					</div>
+		     </div>
+		     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		     		<div class="form-group">
+						<label class="control-label col-sm-2" for="sexeID">Sexe:</label>
+						<div class="col-sm-5">
+						<select class="form-control" name="lastname" ng-model="vm.personne.sexe">
+						 <option value="M" ng-selected="true">M</option>
+						 <option value="F">F</option>
+						</select>
+						</div>
+					</div>
+		     </div>
+		   </div>	
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>
+		</form>
+ 
+		<div class="col-sm-offset-2 col-sm-10">
+			<p>{{postResultMessage}}</p>
+		</div>
+	</div>
+	
+	<div class="col-sm-offset-2 col-sm-10" ng-controller="getcontroller">
+		<button id="btn-id" type="button" class="btn btn-primary" ng-click="getfunction()">Get All Customers</button>
+		<ul>
+        	<li ng-repeat="cust in response">{{cust.firstname + " " + cust.lastname}}</li>
+    	</ul>
+	</div>
+	
+</div>
+</body>
+</html>

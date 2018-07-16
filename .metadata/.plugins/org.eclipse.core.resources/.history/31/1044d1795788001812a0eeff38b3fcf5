@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.demo.repositories.CountryRepository;
+
+@SpringBootApplication
+public class ContriesApplication implements CommandLineRunner {
+	
+	@Autowired
+	private CountryRepository countryRepository;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(ContriesApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

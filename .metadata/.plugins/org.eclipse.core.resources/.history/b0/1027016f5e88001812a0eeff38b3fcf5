@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="webjars/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<body>
+   <div class="container">
+     	<div class="card">
+            <div class="card-block">
+             <table class="table table-hover">
+               <thead>
+                 <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Capital</th>
+                    <th></th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr th:each="country :${data.content}">
+                    <td th:text="${country.id}"></td>
+                    <td th:text="${country.name}"></td>
+                    <td th:text="${country.capital}"></td>
+                    <td></td>
+                 </tr>
+               </tbody>
+               <tfoot>
+                 
+               </tfoot>
+             </table>
+             <hr />
+             <ul class="nav nav-pills">
+	             <li class="nav-item" th:each="i :${#numbers.sequence(0,data.totalPages-1)}">
+	              <a th:href="@{/(page=${i})}" class="nav-link" th:text="${i}" th:classappend="${currentPage}"></a>
+	             </li>
+             </ul>
+   
+   			</div>
+   		</div>
+   </div>
+</body>
+</html>

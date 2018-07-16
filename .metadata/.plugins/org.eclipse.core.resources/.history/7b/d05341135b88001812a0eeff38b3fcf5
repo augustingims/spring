@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="webjars/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<body>
+   <div class="container">
+     	<div class="card">
+            <div class="card-block">
+             <table>
+               <thead>
+                 <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Capital</th>
+                    <th></th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                 </tr>
+               </tbody>
+             </table>
+   
+   			</div>
+   		</div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;app.js&apos; to &apos;static&apos;&#x0A;- Original project: &apos;springboot-angularjs&apos;&#x0A;- Destination element: &apos;static&apos;&#x0A;- Original element: &apos;app.js&apos;" description="Copy file" element1="src/main/resources/static/js/app.js" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1529745275608" target="/TestDemo/src/main/resources/static" units="0" version="1.0"/>
+</session>

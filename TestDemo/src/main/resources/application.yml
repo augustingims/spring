@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: 
+  jpa:
+    generate-ddl: true
+  mvc:
+    view:
+      prefix: /app/
+      suffix: .html
+server:
+  port: 8080 
+  context-Path: /Api

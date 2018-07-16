@@ -1,0 +1,118 @@
+<div>
+		<div class="jumbotron">
+			<div class="container">
+			  <h1>Campagnes</h1>
+			  <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive,
+			  mobile-first projects on the web.</p>
+			</div>
+		</div>
+	</div>
+
+
+<div class="container">
+ 
+	<h3 style="color:blue">Campagne de Recensement</h3>
+	
+	 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		     
+		     	<div ng-controller="postcontroller as vm">
+					<form name="customerForm" ng-submit="vm.submitForm()">
+					   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					   		<div class="form-group">
+							<label class="control-label" for="nomID">Noms:</label>
+								<input type="text" class="form-control" name="nom" id="nomID"
+									placeholder="Enter nom" ng-model="vm.personne.nom"/>
+						</div>
+					   </div>
+					   
+					   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					   		<div class="form-group">
+							<label class="control-label" for="prenomID">Prenoms:</label>
+								<input type="text" class="form-control" name="prenom" id="prenomID"
+									placeholder="Enter prenoms" ng-model="vm.personne.prenom"/>
+							</div>
+					   </div>
+					   
+					   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					      	<div class="form-group">
+							<label class="control-label" for="dateNaissanceID">dateNaissance:</label>
+								<input type="text" class="form-control" name="dateNaissance" id="dateNaissanceID"
+									placeholder="Enter dateNaissance" ng-model="vm.personne.dateNaissance"/>
+							</div>
+					     </div>
+					     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					     		<div class="form-group">
+									<label class="control-label" for="lieuNaissanceID">lieuNaissance:</label>
+										<input type="text" class="form-control" name="lieuNaissance" id="lieuNaissanceID"
+											placeholder="Enter lieuNaissance" ng-model="vm.personne.lieuNaissance"/>
+								</div>
+					     </div>
+					   </div>
+					   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					   		<div class="form-group">
+							<label class="control-label" for="lastnameID">nationalite:</label>
+								<input type="text" class="form-control" name="nationalite" id="nationaliteID"
+									placeholder="Enter nationalite" ng-model="vm.personne.nationalite"/>
+							</div>
+					   </div>
+					   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					     		<div class="form-group">
+									<label class="control-label" for="telephoneID">telephone:</label>
+										<input type="text" class="form-control" name="telephone" id="telephoneID"
+											placeholder="Enter telephone" ng-model="vm.personne.telephone"/>
+								</div>
+					     </div>
+					     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					     		<div class="form-group">
+									<label class="control-label" for="sexeID">Sexe:</label>
+									<select class="form-control" name="lastname" ng-model="vm.personne.sexe">
+									 <option value="M" ng-selected="true">M</option>
+									 <option value="F">F</option>
+									</select>
+								</div>
+					     </div>
+					   </div>	
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default">Sauvegarder</button>
+							</div>
+						</div>
+					</form>
+			 
+					<div class="col-sm-offset-2 col-sm-10">
+						<p>{{postResultMessage}}</p>
+					</div>
+				</div>
+		     
+		     </div>
+		     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		        <div class="col-sm-offset-2 col-sm-10" ng-controller="getcontroller as vm">
+					<button id="btn-id" type="button" class="btn btn-primary" ng-click="vm.getfunction()">
+					  <i class="glyphicon glyphicon-refresh"></i>
+						Actualiser
+					</button>
+			    	<table class="table table-bordered">
+					    <thead>
+					      <tr>
+					        <th>Noms</th>
+					        <th>Prenoms</th>
+					        <th>Telephone</th>
+					        <th>Sexe</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr ng-repeat="cust in response">
+					        <td>{{cust.nom}}</td>
+					        <td>{{cust.prenom}}</td>
+					        <td>{{cust.telephone}}</td>
+					        <td>{{cust.sexe}}</td>
+					      </tr>
+					    </tbody>
+					  </table>
+				</div>
+		     </div>
+     </div>
+</div>
