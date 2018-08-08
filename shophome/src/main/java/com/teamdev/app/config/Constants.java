@@ -1,0 +1,16 @@
+package com.teamdev.app.config;
+
+/**
+ * Application constants.
+ */
+public final class Constants {
+
+    // Regex for acceptable logins
+    public static final String USERNAME_REGEX = "^[_'.@A-Za-z0-9-]*$";
+
+    public static final String SYSTEM_ACCOUNT = "system";
+    public static final String DEFAULT_LANGUAGE = "fr";
+        
+    private Constants() {
+    }
+}

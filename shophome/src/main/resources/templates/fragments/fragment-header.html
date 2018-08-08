@@ -1,0 +1,127 @@
+<header data-th-fragment="header">
+    <div class="header-container">
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-4 hidden-xs"> 
+              <!-- Default Welcome Message -->
+              <div class="welcome-msg "><span data-th-text="#{header.welcome}"></span> </div>
+            </div>
+            
+            <!-- top links -->
+            <div class="headerlinkmenu col-lg-8 col-md-8 col-sm-8 col-xs-12">
+              <div class="links">
+                <div class="myaccount"><a title="My Account" href="/compte"><i class="fa fa-user"></i><span class="hidden-xs" data-th-text="#{header.compte}"></span></a></div>
+                <div class="wishlist"><a title="Wishlist" href="/favoris"><i class="fa fa-heart"></i><span class="hidden-xs" data-th-text="#{header.favoris}"></span></a></div>
+                <div class="login"><a title="Log In" href="/login"><i class="fa fa-unlock-alt"></i><span class="hidden-xs" data-th-text="#{header.login}"></span></a></div>
+                <div class="login"><a title="Sign Up" href="/register"><i class="fa fa-user"></i><span class="hidden-xs" data-th-text="#{header.signup}"></span></a></div>
+              </div>
+              <div class="language-currency-wrapper">
+                <div class="inner-cl">
+                  <div class="block block-language form-language">
+                    <div class="lg-cur"> <span> <img src="/images/flag-default.jpg" alt="French"> <span class="lg-fr" data-th-text="#{header.lang.fr}"></span> <i class="fa fa-angle-down"></i> </span> </div>
+                    <ul>
+                      <li> <a class="selected" id="anglais" href="?lang=en"> <img src="/images/flag-english.jpg" alt="flag"> <span data-th-text="#{header.lang.en}"></span> </a> </li>
+                      <li> <a  id="francais" href="?lang=fr"> <img src="/images/flag-default.jpg" alt="flag"> <span data-th-text="#{header.lang.fr}"></span> </a> </li>
+                    </ul>
+                  </div>
+                  <div class="block block-currency">
+                    <div class="item-cur"> <span>USD </span> <i class="fa fa-angle-down"></i></div>
+                    <ul>
+                      <li> <a><span class="cur_icon">€</span> <span data-th-text="#{header.eur}"></span></a> </li>
+                      <li> <a><span class="cur_icon">XAF</span> <span data-th-text="#{header.xaf}"></span></a> </li>
+                      <li> <a class="selected"><span class="cur_icon">$</span> <span data-th-text="#{header.usd}"></span></a> </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- End Default Welcome Message --> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-3 col-xs-12"> 
+            <!-- Header Logo -->
+            <div class="logo"><a title="e-commerce" href="/"><img alt="e-commerce" src="/images/logo.png"></a> </div>
+            <!-- End Header Logo --> 
+          </div>
+          <div class="col-md-9 col-sm-8 hidden-xs">
+            <div class="mtmegamenu">
+              <ul>
+                <li class="mt-root demo_custom_link_cms">
+                  <div class="mt-root-item"><a href="/">
+                    <div class="title title_font"><span class="title-text" data-th-text="#{header.home}"></span></div>
+                    </a></div>
+                </li>
+                <li class="mt-root demo_custom_link_cms">
+                  <div class="mt-root-item"><a>
+                    <div class="title title_font"><span class="title-text" data-th-text="#{header.categ}"></span></div>
+                    </a></div>
+                  <ul class="menu-items col-md-3 col-sm-4 col-xs-12">
+                    <li class="menu-item depth-1">
+                      <div class="title"> <a href="/"> Home</a></div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="/catalogues">
+                    <div class="title title_font"><span class="title-text" data-th-text="#{header.catalog}"></span></div>
+                    </a></div>
+                </li>
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="/about">
+                    <div class="title title_font"><span class="title-text" data-th-text="#{header.about}"></span></div>
+                    </a></div>
+                </li>
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="contacts">
+                    <div class="title title_font"><span class="title-text" data-th-text="#{header.contact}">C</span></div>
+                    </a></div>
+                </li>
+                
+                <li class="mt-root">
+                  <div class="mt-root-item"><a href="#">
+                    <div class="title title_font"><span class="title-text" data-th-text="#{header.admin}"></span></div>
+                    </a></div>
+                  <ul class="menu-items col-xs-12">
+                    <li class="menu-item depth-1 menucol-1-3 ">
+                      <div class="title title_font"> <a data-th-text="#{header.config}"> </a></div>
+                      <ul class="submenu">
+                        <li class="menu-item">
+                          <div class="title"> <a href="/" data-th-text="#{header.categ}"> </a></div>
+                        </li>
+                        <li class="menu-item">
+                          <div class="title"> <a href="/" data-th-text="#{header.subcat}"></a></div>
+                        </li>
+                        <li class="menu-item">
+                          <div class="title"> <a href="/" data-th-text="#{header.monaire}"> </a></div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item depth-1 menucol-1-3 ">
+                      <div class="title title_font"> <a data-th-text="#{header.data}"> </a></div>
+                      <ul class="submenu">
+                        <li class="menu-item">
+                          <div class="title"> <a href="/users" data-th-text="#{header.users}"> </a></div>
+                        </li>
+                        <li class="menu-item">
+                          <div class="title"> <a href="/produits" data-th-text="#{header.ads}"> </a></div>
+                        </li>
+                      </ul>
+                    </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              <div class="call-us hidden-sm"> <i class="fa fa-phone"></i>
+                <div class="call-us-inner"> <span class="call-text" data-th-text="#{header.call}" ></span> <span class="call-num" data-th-text="#{header.number}"></span> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>

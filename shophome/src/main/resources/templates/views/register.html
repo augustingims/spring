@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html data-layout-decorate="~{fragments/fragment-layout}">
+<head>
+<title>Register</title>
+</head>
+<body>
+	<div data-layout-fragment="content">
+		<div class="breadcrumbs">
+		    <div class="container">
+		      <div class="row">
+		        <div class="col-xs-12">
+		          <ul>
+		            <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
+		            <li><strong>Register</strong></li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <!-- Breadcrumbs End --> 
+		  
+		  <!-- Main Container -->
+		  <section class="main-container col1-layout">
+		    <div class="main container">
+		      <div class="account-login">
+		        
+	        	<form method="post" data-th-action="@{/register}" data-th-object="${userDTO}">
+	        		<h4>Register</h4>
+				    <p>Create your very own account</p>
+				    
+				    <div class="alert alert-info" th:if="${exist}">
+						<p data-th-text="${msg}"></p>
+				 	</div>
+				 	
+	        		<div class="box-authentication">
+				          
+				          
+				          <label for="firstName_register">FirstName<span class="required">*</span></label>
+				          <input id="firstName_register" data-th-field="*{firstName}" type="text" class="form-control" data-th-errorClass="error-input">
+				          <div class="text text-danger" data-th-if="${#fields.hasErrors('firstName')}" data-th-errors="*{firstName}"></div>
+				          
+				          <label for="lastName_register">LastName<span class="required">*</span></label>
+				          <input id="lastName_register" data-th-field="*{lastName}" type="text" class="form-control" data-th-errorClass="error-input">
+				          <div class="text text-danger" data-th-if="${#fields.hasErrors('lastName')}" data-th-errors="*{lastName}"></div>
+				          
+				           <label for="emmail_login">Email address<span class="required">*</span></label>
+				          <input id="emmail_login" data-th-field="*{email}" type="email" class="form-control" data-th-errorClass="error-input">
+				          <div class="text text-danger" data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"></div>
+				          
+				         
+			          </div>
+			          <div class="box-authentication">
+				          
+				          <label for="phone_login">Phone<span class="required">*</span></label>
+				          <input id="phone_login" data-th-field="*{phone}" type="tel" class="form-control" data-th-errorClass="error-input">
+				          <div class="text text-danger" data-th-if="${#fields.hasErrors('phone')}" data-th-errors="*{phone}"></div>
+				          
+				          
+				          <label for="username_login">Username<span class="required">*</span></label>
+				          <input id="username_login" data-th-field="*{username}" type="text" class="form-control" data-th-errorClass="error-input">
+				          <div class="text text-danger" data-th-if="${#fields.hasErrors('username')}" data-th-errors="*{username}"></div>
+				          
+				          <label for="password_login">Password<span class="required">*</span></label>
+				          <input id="password_login" data-th-field="*{password}" type="password" class="form-control" data-th-errorClass="error-input">
+				          <div class="text text-danger" data-th-if="${#fields.hasErrors('password')}" data-th-errors="*{password}"></div>
+				          
+				         
+			          </div>
+			          
+			          <div class="box-authentication">
+				         <div class="col-md-12">
+				         	 <button  type="submit" class="button"><i class="fa fa-user"></i>&nbsp; <span>Register</span></button>
+					          <div class="register-benefits">
+					            <h5>Sign up today and you will be able to :</h5>
+					            <ul>
+					              <li>Track your orders easily</li>
+					              <li>Keep a record of all your purchases</li>
+					            </ul>
+					          </div>
+				         </div>
+			          </div>
+			          
+		          </form>
+		        
+		      </div>
+		    </div>
+		  </section>
+		  <!-- Main Container End --> 
+		  <!-- service section -->
+	</div>
+
+</body>
+</html>

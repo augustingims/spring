@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{fragments/fragment-layout}">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Success</title>
+</head>
+
+<body>
+ <div data-layout-fragment="content" >
+ 
+ 	<div class="breadcrumbs">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-xs-12">
+	          <ul>
+	            <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
+	            <li><span>Success</span></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  
+	  <section class="main-container col1-layout">
+	    <div class="main container">
+	      <div class="alert alert-success">
+	        <p data-th-text="${success}"></p>
+	      </div>
+       	</div>
+       </section>
+       
+ </div>
+</body>
+</html>

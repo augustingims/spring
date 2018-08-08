@@ -1,7 +1,0 @@
-package com.example.demo.entities;
-
-public class Contry {
-  private long id;
-  private String name;
-  private String capital;
-}

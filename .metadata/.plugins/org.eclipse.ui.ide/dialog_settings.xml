@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/mac/Downloads/spring/spring-thymeleaf-template-integration"/>
+		<item value="/Users/mac/Downloads/spring/Impressions"/>
 		<item value="/Users/mac/Downloads/spring/springmvc-thymeleaf/gs-serving-web-content-complete"/>
 		<item value="/Users/mac/Downloads/spring/SpringBootCRUD"/>
 		<item value="/Users/mac/Downloads/spring/springboot-angularjs"/>

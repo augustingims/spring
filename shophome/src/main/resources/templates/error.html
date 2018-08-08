@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html data-layout-decorate="~{fragments/fragment-layout}">
+<head>
+<title>Error</title>
+</head>
+<body>
+	<div data-layout-fragment="content">
+		<div class="breadcrumbs">
+		    <div class="container">
+		      <div class="row">
+		        <div class="col-xs-12">
+		          <ul>
+		            <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
+		            <li><strong><span data-th-text="${status}">404</span> Error </strong></li>
+		          </ul>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <!-- Breadcrumbs End --> 
+		  
+		  <!--Container -->
+		  <div class="error-page">
+		    <div class="container">
+		      <div class="error_pagenotfound"> <strong><span data-th-text="${status}" id="animate-arrow">404</span></strong> <br />
+		        <b>Oops... Page Not Found!</b> <em>There was an error  | <span data-th-text="${message}"></span>.</em>
+		        <p>Try using the button below to go to main page of the site</p>
+		        <br />
+		        <a href="/" class="button-back">
+		         <i class="fa fa-arrow-circle-left fa-lg"></i>
+		         	&nbsp; Go to Back
+	         	</a> 
+	         	</div>
+		      
+		    </div>
+		  </div>
+	</div>
+
+</body>
+</html>
