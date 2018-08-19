@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <!--
   Licensed to the Apache Software Foundation (ASF) under one or more
   contributor license agreements.  See the NOTICE file distributed with
@@ -14,16 +14,13 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
---><!-- The contents of this file will be loaded for each web application --><Context>
-
-    <!-- Default set of monitored resources. If one of these changes, the    -->
-    <!-- web application will be reloaded.                                   -->
-    <WatchedResource>WEB-INF/web.xml</WatchedResource>
-    <WatchedResource>WEB-INF/tomcat-web.xml</WatchedResource>
-    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
-
-    <!-- Uncomment this to disable session persistence across Tomcat restarts -->
-    <!--
-    <Manager pathname="" />
-    -->
-</Context>
+-->
+<tomcat-users>
+<!--
+  <role rolename="tomcat"/>
+  <role rolename="role1"/>
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+-->
+</tomcat-users>
