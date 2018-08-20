@@ -44,6 +44,7 @@
 		<item value="489" key="height"/>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -67,10 +68,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.teamdev.app.SpringThymeleafXml"/>
 		</list>
 		<list key="groupId">
+			<item value="com.teamdev"/>
 		</list>
 		<list key="artifactId">
+			<item value="SpringThymeleafXml"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
