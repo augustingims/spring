@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/swagger
+    username: root
+    password: 
+  jpa:
+    generate-ddl: true
+  jersey:
+    type: filter
+    
+endpoints:
+  enabled: false
+  info:
+    enabled: true
+  health:
+    enabled: true
+  metrics:
+    enabled: true
+
+info:
+    artifact: SpringJerseySwagger
+    name: SpringJerseySwagger
+    description: Spring Jersey Swagger
+    version: 1.0.0
+    
