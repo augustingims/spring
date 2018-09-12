@@ -14,6 +14,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import com.teamdev.app.domain.Country;
@@ -42,11 +44,25 @@ public class CountryResource {
 	
 	
 	@POST
+    @Path("/getAll")
+    @Produces("application/json")
+    @ApiOperation(value = "get All country.", response = Country.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success", response = Country.class),
+            @ApiResponse(code = 401, message = "Unauthorized"),
+            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 404, message = "Not Found"),
+@ApiResponse(code = 500, message = "Failure")})
+	public Page<Country> getAll(Pageable pageable) {
+		return countryServiceImpl.findAll(pageable);
+	}
+	
+	@POST
     @Path("/save")
     @Produces("application/json")
-    @ApiOperation(value = "Retrieves a book based on ID.", response = Book.class)
+    @ApiOperation(value = "save country.", response = Country.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = Book.class),
+            @ApiResponse(code = 200, message = "Success", response = Country.class),
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
@@ -61,7 +77,7 @@ public class CountryResource {
     @Produces("application/json")
     @ApiOperation(value = "update country.", response = Book.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = Book.class),
+            @ApiResponse(code = 200, message = "Success", response = Country.class),
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
@@ -74,9 +90,9 @@ public class CountryResource {
 	@DELETE
     @Path("/delete/{id}")
     @Produces("application/json")
-    @ApiOperation(value = "delete country by id.", response = Book.class)
+    @ApiOperation(value = "delete country by id.", response = Country.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = Book.class),
+            @ApiResponse(code = 200, message = "Success", response = Country.class),
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
@@ -91,7 +107,7 @@ public class CountryResource {
     @Produces("application/json")
     @ApiOperation(value = "get country by id", response = Country.class)
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Success", response = Book.class),
+            @ApiResponse(code = 200, message = "Success", response = Country.class),
             @ApiResponse(code = 401, message = "Unauthorized"),
             @ApiResponse(code = 403, message = "Forbidden"),
             @ApiResponse(code = 404, message = "Not Found"),
