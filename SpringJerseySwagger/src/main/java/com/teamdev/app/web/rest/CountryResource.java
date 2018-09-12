@@ -46,7 +46,7 @@ public class CountryResource {
 	@POST
     @Path("/getAll")
     @Produces("application/json")
-    @ApiOperation(value = "get All country.", response = Country.class)
+    @ApiOperation(value = "get All country.", response = Country.class,responseContainer = "List")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Success", response = Country.class),
             @ApiResponse(code = 401, message = "Unauthorized"),
