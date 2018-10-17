@@ -3496,7 +3496,9 @@ form:after {
     font: normal 25px Helvetica, Arial, sans-serif;
     letter-spacing: -0.05em;
     line-height: 20px;
-    margin: 10px 0 30px
+    margin: 10px 0 30px;
+    color:white;
+    
 }
 .login_content h1:before,
 .login_content h1:after {

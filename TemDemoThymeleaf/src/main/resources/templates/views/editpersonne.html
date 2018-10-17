@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{fragments/layout}">
+<head>
+<title>Personne</title>
+</head>
+<body>
+	<!-- page content -->
+	<div class="right_col" role="main" data-layout-fragment="content">
+		<div class="">
+			<div class="page-title">
+				<div class="title_left">
+					<h3>Creation des personnes</h3>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+						<div class="x_content">
+						<a class="btn btn-info" href="#" th:href="@{/personnes}"> Retouner à la liste des personnes </a>
+							<form  class="form-horizontal"
+								th:action="@{/personnes/save}" th:object="${form}" method="post">
+								<div class="table-responsive">
+									<fieldset>
+										<span class="pull-right"> <input type="submit"
+											id="submitButton" class="btn btn-success" th:value="Save">
+											<input type="reset" id="resetButton" class="btn btn-danger"
+											th:value="Reset" />
+										</span>
+										<table class="table table-striped jambo_table bulk_action">
+											<thead>
+												<tr class="headings">
+												<th class="column-title">ID</th>
+													<th class="column-title">Noms</th>
+													<th class="column-title">Prenoms</th>
+													<th class="column-title">Date Naissance</th>
+													<th class="column-title">Lieu Naissance</th>
+													<th class="column-title">Telephone</th>
+													<th class="column-title">Sexe</th>
+													<th class="column-title">Nationalité</th>
+													<th class="column-title">Pays</th>
+													<th class="column-title no-link last"><span
+														class="nobr">Action</span></th>
+												</tr>
+											</thead>
+
+											<tbody>
+												<tr class="even pointer"
+													th:each="personne,item : ${form.personnes}">
+													<td class="a-center"><input type="number" th:name="|personnes[${item.index}].id|" th:value="${personne.getId()}" disabled="disabled" /></td>
+													<td class=" "> <input  th:name="|personnes[${item.index}].nom|" th:value="${personne.getNom()}" required /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].prenom|" th:value="${personne.getPrenom()}" required /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].dateNaissance|" th:value="${personne.getDateNaissance()}" required /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].lieuNaissance|" th:value="${personne.getLieuNaissance()}" /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].telephone|" th:value="${personne.getTelephone()}"  /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].sexe|" th:value="${personne.getSexe()}"  /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].nationalite|" th:value="${personne.getNationalite()}"  /></td>
+													<td class=" "><input  th:name="|personnes[${item.index}].country|" th:value="${personne.getCountry()}" required /></td>
+													<td class=" last"><a href="#">View</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Large modal -->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<h4>Text in a modal</h4>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl
+						consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
+						faucibus dolor auctor.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Small modal -->
+	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
+		aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel2">Suppression du pays</h4>
+				</div>
+				<div class="modal-body">
+					<p>Are you sure you want to delete this country</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<a href="" class="btn btn-danger" id="delRef">Delete</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /modals -->
+	<!-- /page content -->
+</body>
+</html>

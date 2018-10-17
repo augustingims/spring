@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{fragments/layout}">
+<head>
+<title>Countries</title>
+</head>
+<body>
+	<!-- page content -->
+
+	<div class="right_col" role="main" data-layout-fragment="content">
+		<div class="">
+
+			<div class="page-title">
+				<div class="title_left">
+					<h3>Liste des pays</h3>
+				</div>
+				<div class="title_right">
+					<div
+						class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+						<div class="input-group">
+							<input type="text" class="form-control"
+								placeholder="Recherche une pays..."> <span
+								class="input-group-btn">
+								<button class="btn btn-default" type="button">Go!</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+						<div class="x_content">
+							<form class="myForm" role="form">
+								<input type="hidden" id="idCountry" name="idCountry" /> <span
+									data-th-text="*{idCountry}">US</span>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Name</label> <input type="text" id="name"
+												class="form-control" />.
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Capital</label> <input id="capital" type="text"
+												class="form-control" />
+										</div>
+									</div>
+								</div>
+								<div class="ln_solid"></div>
+								<div class="form-group">
+									<div class="col-md-3 col-sm-3 col-xs-12 pull-right">
+										<button class="btn btn-primary" type="reset"
+											onclick="resetCountry()">Reset</button>
+										<button type="button" onclick="saveCountry()"
+											class="btn btn-success sBtn">Save</button>
+										<span id="updateBtn"></span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+						<div class="x_content">
+							<div class="table-responsive">
+								<table
+									class="table table-striped jambo_table table-bordered bulk_action">
+									<thead>
+										<tr class="headings">
+											<th class="column-title">ID</th>
+											<th class="column-title">Name</th>
+											<th class="column-title">Capital</th>
+											<th class="column-title no-link last"><span class="nobr">Action</span>
+											</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr data-th-each="country,isCoun :${countries}"
+											class="even pointer">
+											<td data-th-text="${isCoun.index + 1}" class="a-center "></td>
+											<td data-th-text="${country.name}"></td>
+											<td data-th-text="${country.capital}"></td>
+											<td class=" last"><a
+												data-th-href="@{findOne(id=${country.id})}"
+												class="btn btn-xs btn-success eBtn">Editer</a> <a
+												data-th-href="@{delete(id=${country.id})}"
+												class="btn btn-xs btn-danger dBtn">Supprimer</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- Small modal -->
+		<div class="modal fade bs-example-modal-sm" id="exampleModalCenter"
+			tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel2">Suppression du
+							pays</h4>
+					</div>
+					<div class="modal-body">
+						<p>Are you sure you want to delete this country</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default modalClose"
+							data-dismiss="modal">Close</button>
+						<input type="hidden" value="" id="delRef" />
+						<button type="button" class="btn btn-danger"
+							onclick="deleteCountry()">Delete</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- /modals -->
+
+	</div>
+	<!-- /page content -->
+</body>
+</html>

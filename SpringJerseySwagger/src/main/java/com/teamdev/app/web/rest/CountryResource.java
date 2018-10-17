@@ -1,6 +1,7 @@
 package com.teamdev.app.web.rest;
 
 import java.awt.print.Book;
+import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -43,7 +44,7 @@ public class CountryResource {
 	private CountryServiceImpl countryServiceImpl;
 	
 	
-	@POST
+	@GET
     @Path("/getAll")
     @Produces("application/json")
     @ApiOperation(value = "get All country.", response = Country.class,responseContainer = "List")
@@ -114,5 +115,19 @@ public class CountryResource {
 @ApiResponse(code = 500, message = "Failure")})
 	public Country findOne(@ApiParam @PathParam(value = "id") Integer id) {
 		return countryRepository.findById(id).get();
+	}
+	
+	@GET
+    @Path("/findByNameAndCapital/{name}/{capital}/{max}")
+    @Produces("application/json")
+    @ApiOperation(value = "get country by name and capital like", response = Country.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Success", response = Country.class),
+            @ApiResponse(code = 401, message = "Unauthorized"),
+            @ApiResponse(code = 403, message = "Forbidden"),
+            @ApiResponse(code = 404, message = "Not Found"),
+@ApiResponse(code = 500, message = "Failure")})
+	public List<Country> findByNameAndCapital(@ApiParam @PathParam(value = "name") String name,@ApiParam @PathParam(value = "capital") String capital,@ApiParam @PathParam(value = "max") Long max) {
+		return countryServiceImpl.getListeCountry(name, capital, max);
 	}
 }
