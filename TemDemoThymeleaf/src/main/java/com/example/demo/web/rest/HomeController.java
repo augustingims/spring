@@ -11,9 +11,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.Personnes;
 import com.example.demo.service.dto.PersonneCreationDto;
+import com.example.demo.service.dto.PersonnesDto;
 import com.example.demo.service.impl.PersonneServiceImpl;
 
 @Controller
@@ -80,8 +82,8 @@ public class HomeController {
     }
 	
 	@GetMapping("/savepersonne")
-	public String getSavePersonne() {
-		return "views/savepersonne";
+	public ModelAndView getSavePersonne(PersonnesDto personnesDto) {
+		return new ModelAndView("views/savepersonne").addObject("userInfo", "gims");
 	}
 	
 }

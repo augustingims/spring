@@ -31,5 +31,7 @@ $(document).ready(function() {
 	});
 	
 	console.log(todos);
+	console.log(userInfo);
+	console.log(user);
 	
 });

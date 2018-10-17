@@ -4,6 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,11 +50,12 @@ public class PersonneResource {
 	}
 	
 	@PostMapping(value="/personnes/create", params={"save"})
-    public String saveSeedstarter(PersonneCreationDto personneCreationDto, final BindingResult bindingResult, final ModelMap model,RedirectAttributes attributes) {
+    public String saveSeedstarter(PersonneCreationDto personneCreationDto, final BindingResult bindingResult, final ModelMap model,RedirectAttributes attributes,HttpSession session) {
         if (bindingResult.hasErrors()) {
             return "views/createpersonne";
         }
         personneServiceImpl.saveAll(personneCreationDto.getPersonnes());
+        session.setAttribute("user", "gims");
         model.clear();
         attributes.addFlashAttribute("todos", "todos");
         return "redirect:/personnes";
