@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{fragments/layout}">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	data-layout-decorate="~{fragments/layout}">
 <head>
 <title>Countries</title>
-<script type="text/javascript" th:inline="javascript">
-    /*<![CDATA[*/
-    	var countries = /*[[${countries}]]*/;
-    /*]]>*/
-  </script>
 </head>
 <body>
 	<!-- page content -->
-
 	<div class="right_col" role="main" data-layout-fragment="content">
+		<script type="text/javascript" th:inline="javascript">
+		    /*<![CDATA[*/
+
+		    	/*]]>*/
+		  </script>
 		<div class="">
 
 			<div class="page-title">
@@ -21,13 +21,15 @@
 				<div class="title_right">
 					<div
 						class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+						<form class="myForm" th:action="@{/country}" method="get" role="form">
 						<div class="input-group">
-							<input type="text" class="form-control"
+							<input type="text" name="country" class="form-control"
 								placeholder="Recherche une pays..."> <span
 								class="input-group-btn">
-								<button class="btn btn-default" type="button">Go!</button>
+								<button class="btn btn-default" type="submit">Go!</button>
 							</span>
-						</div>
+						 </div>
+						</form>
 					</div>
 				</div>
 			</div>

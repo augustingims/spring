@@ -32,8 +32,13 @@ public class CountryResource {
 	private CountryServiceImpl countryServiceImpl;
 
 	@GetMapping("/country")
-	public String getAll(Model model) {
-		model.addAttribute("countries", countryRepository.findAll());
+	public String getAll(String country,Model model) {
+		if(country!=null) {
+			model.addAttribute("countries", countryServiceImpl.getListeCountry(country,country));
+		}else {
+			model.addAttribute("countries", countryRepository.findAll());
+		}
+		
 		return "views/country";
 	}
 
@@ -68,7 +73,7 @@ public class CountryResource {
 	@GetMapping("/findByNameAndCapital/{name}/{capital}/{max}")
 	public String findByNameAndCapital(@PathVariable(value = "name") String name,
 			@PathVariable(value = "capital") String capital, @PathVariable(value = "max") Long max) {
-		countryServiceImpl.getListeCountry(name, capital, max);
+		countryServiceImpl.getListeCountryWthMax(name, capital, max);
 		return "views/country";
 	}
 }

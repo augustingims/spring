@@ -62,7 +62,49 @@ public class CountryServiceImpl implements CountryService{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Country> getListeCountry(String name,String capital, Long resultatmax) {
+	public List<Country> getListeCountry(String name,String capital) {
+		Query q = null;
+		try {
+
+			String query = "Select a from Country a where 1=1 ";
+
+			if (name != null) {
+
+				query += " And a.name Like :name ";
+
+			}
+
+			if (capital != null) {
+
+				query += " And a.capital Like :capital";
+
+			}
+
+			query += " Order By a.name Asc";
+
+			q = em.createQuery(query);
+
+			if (name != null) {
+
+				q.setParameter("name", UtilsMethods.formatStringToFind(name));
+			}
+
+			if (capital != null) {
+
+				q.setParameter("capital",
+						UtilsMethods.formatStringToFind(capital));
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+		return q.getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Country> getListeCountryWthMax(String name,String capital, Long resultatmax) {
 		Query q = null;
 		try {
 
@@ -119,7 +161,7 @@ public class CountryServiceImpl implements CountryService{
 
 				if (name != null) {
 
-					query += " And a.name =:name ";
+					query += " And a.name Like :name ";
 
 				}
 
@@ -129,7 +171,7 @@ public class CountryServiceImpl implements CountryService{
 
 				if (name != null) {
 
-					q.setParameter("name", name);
+					q.setParameter("name", UtilsMethods.formatStringToFind(name));
 				}
 
 				result = (Country) q.setMaxResults(1).getSingleResult();

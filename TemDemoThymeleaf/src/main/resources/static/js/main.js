@@ -29,8 +29,5 @@ $(document).ready(function() {
 		$('#exampleModalCenter').modal();
 
 	});
-	
-	console.log(MY_APP);
-	console.log(countries);
-	
+		
 });

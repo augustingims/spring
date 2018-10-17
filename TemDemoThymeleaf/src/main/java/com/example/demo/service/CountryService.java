@@ -21,7 +21,9 @@ public interface CountryService {
 
 	void delete(Long id);
 	
-	List<Country> getListeCountry(String name,String capital, Long resultatmax);
+	List<Country> getListeCountryWthMax(String name,String capital, Long resultatmax);
+	
+	List<Country> getListeCountry(String name,String capital);
 	
 	Country getCountry(String name);
 
