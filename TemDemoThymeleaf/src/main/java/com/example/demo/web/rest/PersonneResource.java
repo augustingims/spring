@@ -15,6 +15,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.domain.Personnes;
 import com.example.demo.repository.PersonnesRepository;
@@ -48,12 +49,13 @@ public class PersonneResource {
 	}
 	
 	@PostMapping(value="/personnes/create", params={"save"})
-    public String saveSeedstarter(PersonneCreationDto personneCreationDto, final BindingResult bindingResult, final ModelMap model) {
+    public String saveSeedstarter(PersonneCreationDto personneCreationDto, final BindingResult bindingResult, final ModelMap model,RedirectAttributes attributes) {
         if (bindingResult.hasErrors()) {
             return "views/createpersonne";
         }
         personneServiceImpl.saveAll(personneCreationDto.getPersonnes());
         model.clear();
+        attributes.addFlashAttribute("todos", "todos");
         return "redirect:/personnes";
     }
 	

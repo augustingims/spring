@@ -29,5 +29,7 @@ $(document).ready(function() {
 		$('#exampleModalCenter').modal();
 
 	});
-		
+	
+	console.log(todos);
+	
 });

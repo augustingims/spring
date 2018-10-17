@@ -5,7 +5,30 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-10-16T20:46:53Z</updated>
+  <updated>2018-10-17T15:33:54Z</updated>
+  <entry>
+    <title>Spring Boot 2.1.0 RC1 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/10/17/spring-boot-2-1-0-rc1-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Stéphane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2018-10-17:3438</id>
+    <updated>2018-10-17T15:33:54Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team, it is my pleasure to announce that Spring Boot 2.1.0.RC1 has been released and is now available from &lt;a href="http://repo.spring.io/milestone/"&gt;our milestone repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release closes &lt;a href="https://github.com/spring-projects/spring-boot/milestone/107?closed=1"&gt;over 100 issues and pull requests&lt;/a&gt;, and is our first release candidate. At this point we&amp;rsquo;re not anticipating that any major API changes or new features will be added before our final 2.1 GA release.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve refined a number of items from previous milestone, and provide a number of notable new features including:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Auto-configuration for additional Micrometer registries: AppOptics, Humio and KairosDB&lt;/li&gt;
+  &lt;li&gt;Support for Jersey metrics (Thread pool and HTTP request)&lt;/li&gt;
+  &lt;li&gt;Integration with Hibernate&amp;rsquo;s &lt;code&gt;BeanContainer&lt;/code&gt; API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This release also picks up &lt;a href="https://github.com/spring-projects/spring-boot/milestone/121?closed=1"&gt;97 issues&lt;/a&gt; that were closed for the &lt;a href="https://spring.io/blog/2018/10/16/spring-boot-2-0-6"&gt;recent 2.0.6 release&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a complete list of changes, and upgrade instructions, see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1.0-RC1-Release-Notes"&gt;Spring Boot 2.1.0.RC1 Release Notes&lt;/a&gt; on the WIKI. &lt;/p&gt;
+&lt;p&gt;To get started with Spring Boot 2.1.0 RC1 and discover those new features, you can easily bootstrap a new project on &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks to everyone that has contributed to Spring Boot 2.1 so far!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.1.0.RC1/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - October 16th, 2018</title>
     <link rel="alternate" href="https://spring.io/blog/2018/10/16/this-week-in-spring-october-16th-2018" />
@@ -113,7 +136,7 @@
     <id>tag:spring.io,2018-10-16:3432</id>
     <updated>2018-10-16T18:02:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team and everyone that contributed, it is my pleasure to announce that Spring Boot 2.0.6 has been released and is is now available from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Spring Boot 2.0.6 includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.0.6.RELEASE"&gt;97 fixes, improvements, and dependency updates&lt;/a&gt; as well as &lt;a href="https://spring.io/admin/blog/3435-spring-project-vulnerability-reports-published"&gt;2 CVE reports&lt;/a&gt;. Thanks to all that have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;Spring Boot 2.0.6 includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.0.6.RELEASE"&gt;97 fixes, improvements, and dependency updates&lt;/a&gt; as well as &lt;a href="https://spring.io/blog/2018/10/16/spring-project-vulnerability-reports-published"&gt;a Spring Framework CVE report&lt;/a&gt;. Thanks to all that have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.0.6.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
@@ -162,7 +185,7 @@
     <id>tag:spring.io,2018-10-16:3431</id>
     <updated>2018-10-16T10:23:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the team and everyone that contributed, I am pleased to announce that Spring Boot 1.5.17 has been released and is is now available from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Spring Boot 1.5.17 includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v1.5.17.RELEASE"&gt;19 fixes, improvements, and dependency updates&lt;/a&gt; as well as &lt;a href="https://spring.io/admin/blog/3435-spring-project-vulnerability-reports-published"&gt;2 CVE reports&lt;/a&gt;. Thanks to all that have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;Spring Boot 1.5.17 includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v1.5.17.RELEASE"&gt;19 fixes, improvements, and dependency updates&lt;/a&gt; as well as &lt;a href="https://spring.io/blog/2018/10/16/spring-project-vulnerability-reports-published"&gt;2 CVE reports&lt;/a&gt;. Thanks to all that have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/1.5.17.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
@@ -310,7 +333,7 @@
   &lt;li&gt;Spring Data Elasticsearch 3.1.1 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-elasticsearch/3.1.1.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/3.1.1.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/3.1.1.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/elasticsearch/docs/3.1.1.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data Couchbase 3.1.1 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-couchbase/3.1.1.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.1.1.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.1.1.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/couchbase/docs/3.1.1.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data JDBC 1.0.1 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jdbc/1.0.1.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jdbc/docs/1.0.1.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jdbc/docs/1.0.1.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jdbc/docs/1.0.1.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#kay-sr10" class="anchor" name="kay-sr10"&gt;&lt;/a&gt;Kay SR10&lt;/h2&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#kay-sr11" class="anchor" name="kay-sr11"&gt;&lt;/a&gt;Kay SR11&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Spring Data Commons 2.0.11 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-commons/2.0.11.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/2.0.11.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/2.0.11.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/commons/docs/2.0.11.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spring Data JPA 2.0.11 - &lt;a href="https://repo.spring.io/libs-release/org/springframework/data/spring-data-jpa/2.0.11.RELEASE"&gt;Artifacts&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/2.0.11.RELEASE/api"&gt;Javadoc&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/2.0.11.RELEASE/reference/html"&gt;Documentation&lt;/a&gt; - &lt;a href="http://docs.spring.io/spring-data/jpa/docs/2.0.11.RELEASE/changelog.txt"&gt;Changelog&lt;/a&gt;&lt;/li&gt;
@@ -358,7 +381,7 @@
 &lt;p&gt;The first maintenance release of the 5.1 line includes &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=17148"&gt;over 30 fixes and improvements&lt;/a&gt;. Spring Framework 5.0.10 &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=17115"&gt;also includes a wide range of 20 fixes and improvements&lt;/a&gt; while Spring Framework 4.3.20 &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&amp;version=17116"&gt;is a rather minimal patch release&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The first release candidate of Spring Boot 2.1, based on Spring Framework 5.1.1, is around the corner! We&amp;rsquo;ll also follow up with corresponding Spring Boot 2.0.6 and 1.5.17 releases later this week.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://spring.io/projects/spring-framework"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/SPR"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.1.1.RELEASE/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2018-10-16 UPDATE:&lt;/strong&gt; The releases address a vulnerability. Please see &lt;a href="https://spring.io/admin/blog/3435-spring-project-vulnerability-reports-published"&gt;this blog post&lt;/a&gt; published after the associated Spring Boot 2.0.6 and 1.5.17 releases.&lt;/p&gt;</content>
+&lt;p&gt;&lt;strong&gt;2018-10-16 UPDATE:&lt;/strong&gt; The releases address a vulnerability. Please see &lt;a href="https://spring.io/blog/2018/10/16/spring-project-vulnerability-reports-published"&gt;this blog post&lt;/a&gt; published after the associated Spring Boot 2.0.6 and 1.5.17 releases.&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>This Week in Spring - October 9th, 2018</title>
@@ -1087,31 +1110,6 @@ However, in cases where you are certain about at least the property type, it may
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Several other enhancements have found their way into the MongoDB module, but we do not have the space to address them here.
 Make sure to check out the &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/2.1.0.RELEASE/reference/html/#new-features.2-1-0"&gt;new features&lt;/a&gt; section in the reference documentation to learn more about reactive MapReduce, default sorting, &lt;code&gt;findAndReplace(…)&lt;/code&gt; methods, and new Aggregation operators and stages.&lt;/p&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 5.1 goes GA</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/09/27/spring-security-5-1-goes-ga" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Joe Grandja</name>
-    </author>
-    <id>tag:spring.io,2018-09-22:3411</id>
-    <updated>2018-09-27T13:07:16Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, it is my pleasure to announce the general availability of Spring Security 5.1.
-This release closes off &lt;a href="https://github.com/spring-projects/spring-security/milestone/107?closed=1"&gt;50+ tickets&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Please check out the &lt;a href="https://docs.spring.io/spring-security/site/docs/5.1.0.RELEASE/reference/htmlsingle/#new"&gt;What’s New&lt;/a&gt; in Spring Security 5.1.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As always, we look forward to hearing your &lt;a href="https://github.com/spring-projects/spring-security/issues"&gt;feedback&lt;/a&gt;!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; |
-&lt;a href="http://docs.spring.io/spring-security/site/docs/5.1.0.RELEASE/reference/htmlsingle/"&gt;Reference&lt;/a&gt;
-| &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
   </entry>
 </feed>
