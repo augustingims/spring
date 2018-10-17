@@ -30,4 +30,7 @@ $(document).ready(function() {
 
 	});
 	
+	console.log(MY_APP);
+	console.log(countries);
+	
 });
