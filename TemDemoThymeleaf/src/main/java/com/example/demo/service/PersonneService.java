@@ -2,11 +2,9 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
 import com.example.demo.domain.Personnes;
 import com.example.demo.service.dto.DataDto;
+import com.example.demo.service.dto.PersonneCountryDto;
 import com.example.demo.service.dto.PersonnesDto;
 
 public interface PersonneService {
@@ -22,5 +20,9 @@ public interface PersonneService {
 	void saveAll(List<Personnes> personnes);
 	
 	List<DataDto >getListeCostumData();
+	
+	List<PersonneCountryDto> getPersonneCountry();
+	
+	List<PersonneCountryDto> getPersonneCountryNamedQuery();
 
 }

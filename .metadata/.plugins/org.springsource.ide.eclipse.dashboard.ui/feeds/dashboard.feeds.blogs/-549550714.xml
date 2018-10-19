@@ -5,7 +5,156 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2018-10-17T15:33:54Z</updated>
+  <updated>2018-10-17T23:04:05Z</updated>
+  <entry>
+    <title>Spring Cloud Edgware.SR5 Has Been Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2018/10/17/spring-cloud-edgware-sr5-has-been-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Ryan Baxter</name>
+    </author>
+    <id>tag:spring.io,2018-10-17:3437</id>
+    <updated>2018-10-17T23:04:05Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the Service Release 5 (SR5) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud Edgware&lt;/a&gt; Release Train is available today. You can find the release in &lt;a href="http://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/Edgware.SR5/"&gt;Maven Central&lt;/a&gt;. You can also check out the Edgware &lt;a href="https://github.com/spring-projects/spring-cloud/wiki/Spring-Cloud-Edgware-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-edgware-release-train" class="anchor" name="notable-changes-in-the-edgware-release-train"&gt;&lt;/a&gt;Notable Changes in the Edgware Release Train&lt;/h2&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-commons/issues?q=is%3Aclosed+milestone%3A1.3.5.RELEASE"&gt;Bug fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-config/issues?q=is%3Aclosed+milestone%3A1.4.5.RELEASE"&gt;Documentation and Bug fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-contract" class="anchor" name="spring-cloud-contract"&gt;&lt;/a&gt;Spring Cloud Contract&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-contract/issues?q=is%3Aclosed+milestone%3A1.2.6.RELEASE"&gt;Bug fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Via &lt;a href="https://github.com/spring-cloud/spring-cloud-contract/pull/707"&gt;#707&lt;/a&gt; we&amp;rsquo;ve a test listener that handles issues with closing and starting WireMock servers. Thanks to this change you no longer need to set the &lt;code&gt;@DirtiesContext&lt;/code&gt; on your tests if you want to reuse the same ports for your stubs.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-sleuth" class="anchor" name="spring-cloud-sleuth"&gt;&lt;/a&gt;Spring Cloud Sleuth&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/issues?q=is%3Aclosed+milestone%3A1.3.5.RELEASE"&gt;Bug fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Via &lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth/issues/1077"&gt;#1077&lt;/a&gt; we&amp;rsquo;ve added support for single header B3 propagation.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-netflix" class="anchor" name="spring-cloud-netflix"&gt;&lt;/a&gt;Spring Cloud Netflix&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-netflix/issues?q=is%3Aclosed+milestone%3A1.4.6.RELEASE"&gt;Bug fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-vault" class="anchor" name="spring-cloud-vault"&gt;&lt;/a&gt;Spring Cloud Vault&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-vault/issues?q=is%3Aclosed+milestone%3A1.1.2"&gt;Bug Fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-consul" class="anchor" name="spring-cloud-consul"&gt;&lt;/a&gt;Spring Cloud Consul&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-consul/issues?q=is%3Aclosed+milestone%3A1.3.5.RELEASE"&gt;Bug fixes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The following modules were updated as part of Edgware.SR5:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Module &lt;/th&gt;
+      &lt;th&gt;Version &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud AWS &lt;/td&gt;
+      &lt;td&gt;1.2.3.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Contract &lt;/td&gt;
+      &lt;td&gt;1.2.6.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
+      &lt;td&gt;1.3.5.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Zookeeper &lt;/td&gt;
+      &lt;td&gt;1.2.2.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Sleuth &lt;/td&gt;
+      &lt;td&gt;1.3.5.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Config &lt;/td&gt;
+      &lt;td&gt;1.4.5.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Netflix &lt;/td&gt;
+      &lt;td&gt;1.4.6.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Commons &lt;/td&gt;
+      &lt;td&gt;1.3.5.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Bus &lt;/td&gt;
+      &lt;td&gt;1.3.4.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Security &lt;/td&gt;
+      &lt;td&gt;1.2.3.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Cloudfoundry &lt;/td&gt;
+      &lt;td&gt;1.1.2.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Function &lt;/td&gt;
+      &lt;td&gt;1.0.1.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Vault &lt;/td&gt;
+      &lt;td&gt;1.1.2.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
+      &lt;td&gt;1.0.2.RELEASE &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;As always, we welcome feedback on &lt;a href="https://github.com/spring-cloud/"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloud"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To get started with Maven with a BOM (dependency management only):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&lt;br/&gt;&amp;lt;dependencyManagement&amp;gt;&#xD;
+    &amp;lt;dependencies&amp;gt;&#xD;
+        &amp;lt;dependency&amp;gt;&#xD;
+            &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+            &amp;lt;artifactId&amp;gt;spring-cloud-dependencies&amp;lt;/artifactId&amp;gt;&#xD;
+            &amp;lt;version&amp;gt;Edgware.SR5&amp;lt;/version&amp;gt;&#xD;
+            &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt;&#xD;
+            &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt;&#xD;
+        &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/dependencyManagement&amp;gt;&#xD;
+&amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-config&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
+        &amp;lt;artifactId&amp;gt;spring-cloud-starter-netflix-eureka-client&amp;lt;/artifactId&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+    ...&#xD;
+&amp;lt;/dependencies&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or, with Gradle:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;buildscript {&#xD;
+    dependencies {&#xD;
+        classpath &amp;quot;io.spring.gradle:dependency-management-plugin:1.0.2.RELEASE&amp;quot;&#xD;
+    }&#xD;
+}&#xD;
+&#xD;
+&#xD;
+&#xD;
+apply plugin: &amp;quot;io.spring.dependency-management&amp;quot;&#xD;
+&#xD;
+dependencyManagement {&#xD;
+    imports {&#xD;
+        mavenBom &amp;#39;org.springframework.cloud:spring-cloud-dependencies:Edgware.SR5&amp;#39;&#xD;
+    }&#xD;
+}&#xD;
+&#xD;
+dependencies {&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-config&amp;#39;&#xD;
+    compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-client&amp;#39;&#xD;
+    ...&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.1.0 RC1 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2018/10/17/spring-boot-2-1-0-rc1-available-now" />
@@ -944,172 +1093,6 @@ Some setup details, such as disabling the (enabled by default) ability to create
 &lt;p&gt;You can find out more about that in the corresponding section of the &lt;a href="https://docs.spring.io/spring-data/rest/docs/current/reference/html/#customizing-sdr.http-methods"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>What's new in Spring Data Lovelace for MongoDB?</title>
-    <link rel="alternate" href="https://spring.io/blog/2018/09/27/what-s-new-in-spring-data-lovelace-for-mongodb" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Christoph Strobl</name>
-    </author>
-    <id>tag:spring.io,2018-09-21:3409</id>
-    <updated>2018-09-27T14:45:40Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;The past year has seen a lot of enhancements brought to the NoSQL Store including a bunch of new features and extended capabilities. We collaborated closely with the driver team at MongoDB, so the release already ships with decent support for sessions, change streams, schema validation, and (of course) transactions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The most interesting new feature is probably MongoDB 4.0&amp;#8217;s support for &lt;a href="https://www.mongodb.com/transactions"&gt;Multi-Document Transactions&lt;/a&gt;. If you have followed this blog before, you have probably read our &lt;a href="https://spring.io/blog/2018/06/28/hands-on-mongodb-4-0-transactions-with-spring-data"&gt;Hands on Guide&lt;/a&gt; that explains both &lt;code&gt;ClientSessions&lt;/code&gt; (which are the main building block) and transactions themselves.
-In short, SpringData provides you with everything you need to leverage &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/data-access.html#transaction"&gt;Spring managed transaction support&lt;/a&gt; in your project.
-To use it, declare &lt;code&gt;MongoTransactionManager&lt;/code&gt; in your configuration, as the following example shows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@Configuration
-class Config extends AbstractMongoConfiguration {
-
-  @Bean
-  MongoTransactionManager transactionManager(MongoDbFactory dbFactory) {
-    return new MongoTransactionManager(dbFactory);
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Transactions operate on top of snapshots and, therefore, changes made during a transaction appear a little odd within the oplog.
-Thankfully, &lt;a href="https://docs.mongodb.com/manual/changeStreams/"&gt;change streams&lt;/a&gt; have been introduced in MongoDB 3.6 to replace the current oplog tailing with a well supported solution that is capable of untangling entries during a transaction.
-Change streams let you get notified whenever a certain event happens on the database or even the collection level.
-It provides the means to filter events by using Aggregations but also lets you resume the stream at a given checkpoint or timestamp.
-Consuming a change stream feels most natural when done with a reactive API, as the following example shows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;Flux changeStream = reactiveTemplate
-  .changeStream(newAggregation(match(where("operationType").is("insert"))),
-    Person.class, ChangeStreamOptions.empty(), "users");&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The preceding stream returns only new documents that are inserted into the &lt;code&gt;users&lt;/code&gt; collection and maps those to the &lt;code&gt;Person&lt;/code&gt; domain type.
-To achieve the same by using a synchronous API creates a long running blocking task that needs to be delegated to a separate component, a &lt;code&gt;MessageListenerContainer&lt;/code&gt;, as the following example shows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;MessageListenerContainer container =
-  new DefaultMessageListenerContainer(template);
-container.start();
-
-MessageListener&amp;lt;ChangeStreamDocument&amp;lt;Document&amp;gt;, Person&amp;gt; listener =
-  System.out::println;
-
-ChangeStreamRequest request = ChangeStreamRequest.builder()
-  .collection("users")
-  .filter(newAggregation(match(where("operationType").is("insert")))
-  .publishTo(listener)
-  .build();
-
-container.register(request, Person.class);
-
-// …
-
-container.stop();&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Having a &lt;code&gt;MessageListenerContainer&lt;/code&gt; in place opens up other possibilities.
-Using infinite streams with a tailable cursor on a capped collection has been limited to the reactive API so far.
-Now it is a matter of passing a &lt;code&gt;SubscriptionRequest&lt;/code&gt; to the container, as the following example shows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;MessageListener&amp;lt;Document, Person&amp;gt; listener = System.out::println;
-
-TailableCursorRequest request = TailableCursorRequest.builder()
-  .collection("users")
-  .filter(query(where("active").eq(true)))
-  .publishTo(listener)
-  .build();
-
-container.register(request, Person.class);&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The preceding snippet listens to inserts on the &lt;code&gt;users&lt;/code&gt; collection and publishes &lt;code&gt;Messages&lt;/code&gt; on the console.
-For quite a while, MongoDB has allowed validating documents that are added to a collection or updated within a collection by using a validator that follows the overall query syntax.
-With its new version, MongoDB extended this validation by adding support for &lt;a href="https://docs.mongodb.com/manual/core/schema-validation/#json-schema"&gt;JSON Schema&lt;/a&gt;, which lets you define the document blueprint in more object oriented approach.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-json" data-lang="json"&gt;{
-  "type": "object",
-  "required": [ "lastname" ],
-  "properties": {
-    "lastname": {
-      "type": "string"
-    },
-    "address": {
-      "type": "object",
-      "properties": {
-        "postCode": { "type": "string", "minLength": 4, "maxLength": 5 }
-      }
-    }
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The &lt;code&gt;MongoJsonSchema&lt;/code&gt; and its builder is the Spring Data API gateway to defining a schema for your collection. The following example shows how to use it:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;MongoJsonSchema jsonSchema = MongoJsonSchema.builder()
-  .required("lastname")
-  .properties(
-     string("lastname"),
-     object("address")
-       .properties(string("postCode").minLength(4).maxLength(5))
-  ).build();
-
-CollectionOptions options = CollectionOptions.empty().schema(jsonSchema);
-
-template.createCollection(Person.class, options);&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Still, MongoDB, being a schema-less store, lets fields have different types on a per-document level. You can also use the schema to query for documents that match the blueprint without having to force a validation onto the collection, as the following example shows:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;template.query(Person.class)
-  .matching(query(matchingDocumentStructure(jsonSchema))).all();&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Another minor but noticeable enhancement to the MongoDB module comes in the form of distinct value queries that let you retrieve a distinct list of all values assigned to a single field.
-As mentioned before, fields do not necessarily have to have the same data type. That is why, by default, &lt;code&gt;distinct&lt;/code&gt; returns an untyped &lt;code&gt;Collection&lt;/code&gt;. The following example shows how to use &lt;code&gt;distinct&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;List&amp;lt;Object&amp;gt; distinctValues = template.query(Person.class)
-  .distinct("active")
-  .all();&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The active flag might be a mixture of maybe "y/n", "true/false" and "0/1" pairs represented as &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;boolean&lt;/code&gt;, and (maybe) &lt;code&gt;int32&lt;/code&gt; within the store itself.
-However, in cases where you are certain about at least the property type, it may be useful to use the &lt;code&gt;as&lt;/code&gt; projection to obtain a strongly typed collection. The following example uses the &lt;code&gt;as&lt;/code&gt; projection:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;List&amp;lt;Boolean&amp;gt; distinctValues = template.query(Person.class)
-  .distinct("active")
-  .as(Boolean)
-  .all();&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Several other enhancements have found their way into the MongoDB module, but we do not have the space to address them here.
-Make sure to check out the &lt;a href="https://docs.spring.io/spring-data/mongodb/docs/2.1.0.RELEASE/reference/html/#new-features.2-1-0"&gt;new features&lt;/a&gt; section in the reference documentation to learn more about reactive MapReduce, default sorting, &lt;code&gt;findAndReplace(…)&lt;/code&gt; methods, and new Aggregation operators and stages.&lt;/p&gt;
 &lt;/div&gt;</content>
   </entry>
 </feed>

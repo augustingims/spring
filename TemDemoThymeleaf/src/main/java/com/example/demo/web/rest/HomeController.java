@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.domain.Personnes;
+import com.example.demo.repository.PersonnesRepository;
 import com.example.demo.service.dto.PersonneCreationDto;
 import com.example.demo.service.dto.PersonnesDto;
 import com.example.demo.service.impl.PersonneServiceImpl;
@@ -23,6 +24,9 @@ public class HomeController {
 
 	@Autowired
     private PersonneServiceImpl personneServiceImpl;
+	
+	@Autowired
+    private PersonnesRepository personnesRepository;
 	
 	@GetMapping("/")
 	public String login() {
@@ -37,6 +41,10 @@ public class HomeController {
 	@GetMapping("/personnes")
 	public String getAllPersonnes(Model model) {
 		 model.addAttribute("personnes", personneServiceImpl.findAll());
+		 model.addAttribute("personnescountryquery", personneServiceImpl.getPersonneCountryNamedQuery());
+		 model.addAttribute("personnescountry", personneServiceImpl.getPersonneCountry());
+		 model.addAttribute("personnescountryJpaQuery", personnesRepository.getPersonneCountry());
+		 
 		return "views/personne";
 	}
 	

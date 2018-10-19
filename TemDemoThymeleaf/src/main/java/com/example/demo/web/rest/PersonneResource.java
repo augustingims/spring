@@ -55,7 +55,6 @@ public class PersonneResource {
             return "views/createpersonne";
         }
         personneServiceImpl.saveAll(personneCreationDto.getPersonnes());
-        session.setAttribute("user", "gims");
         model.clear();
         attributes.addFlashAttribute("todos", "todos");
         return "redirect:/personnes";

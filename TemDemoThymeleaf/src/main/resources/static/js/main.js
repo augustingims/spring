@@ -32,6 +32,8 @@ $(document).ready(function() {
 	
 	console.log(todos);
 	console.log(userInfo);
-	console.log(user);
+	console.log(personnescountryJpaQuery);
+	console.log(personnescountry);
+	console.log(personnescountryquery);
 	
 });
