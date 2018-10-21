@@ -33,7 +33,7 @@
 
 			<div class="clearfix"></div>
 
-			<div class="row">
+			<div class="row" th:if="${not #lists.isEmpty(personnes)}">
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<div class="x_panel">
 						<div class="x_content">
@@ -59,7 +59,7 @@
 										<tr class="even pointer" th:each="personne,item : ${personnes}" th:style="${item.odd} ? 'color: gray' : 'color: blue;'">
 											<td class="a-center"><span th:text="${item.index + 1}">
 											</span></td>
-											<td class=" "><span th:text="${personne.nom}"> </span></td>
+											<td class=" "><input type="hidden" th:value="${personne.nom}" th:name="'nom' + ${personne.id}" th:id="'nom' + ${personne.id}" /> <span th:text="${personne.nom}"> </span></td>
 											<td class=" "><span th:text="${personne.prenom}"> </span></td>
 											<td class=" "><span th:text="${personne.dateNaissance}"> </span></td>
 											<td class=" "><span th:text="${personne.lieuNaissance}"> </span></td>
@@ -67,7 +67,16 @@
 											<td class=" "><span th:text="${personne.sexe}"> </span></td>
 											<td class=" "><span th:text="${personne.nationalite}"> </span></td>
 											<td class=" "><span th:text="${personne.country}"> </span></td>
-											<td class=" last"><a href="#">View</a></td>
+											<td class=" last">
+											
+											<button class="btn btn-xs" th:onclick="'javascript:showDetails(\'' +${personne.nom}+'\');'"> test</button>
+											
+											<a id="details" th:onclick="|showDetails('${personne.nom}')|" >View</a>
+											<a id="detail" th:onclick="'showDetails(\'' + ${personne.nom} + '\');'" >View 2</a>
+											
+											<a id="detail" onclick="showDetails(${personne})" >Object</a>
+											<a id="detail" th:onclick="'javascript:showDetails([[${personne}]])'" >Object 2</a>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -78,33 +87,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Large modal -->
-	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog"
-		aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">×</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-				</div>
-				<div class="modal-body">
-					<h4>Text in a modal</h4>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl
-						consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum
-						faucibus dolor auctor.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
 	<!-- Small modal -->
 	<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog"
 		aria-hidden="true">

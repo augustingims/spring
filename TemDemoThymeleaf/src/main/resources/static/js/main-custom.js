@@ -33,6 +33,11 @@ function vide() {
 	$('.myForm #idCountry').val('');
 }
 
+function showDetails(personne) {
+	console.log(personne);
+}
+
+
 function notification(msg) {
 	new PNotify({
 		title : 'Notification',
