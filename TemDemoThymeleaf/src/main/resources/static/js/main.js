@@ -30,6 +30,8 @@ $(document).ready(function() {
 
 	});
 	
+	$('#datatable').DataTable();
+	
 	console.log(todos);
 	console.log(userInfo);
 	console.log(personnescountryJpaQuery);

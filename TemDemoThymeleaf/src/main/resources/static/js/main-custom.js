@@ -5,23 +5,25 @@ function saveCountry() {
 	country.capital = $('.myForm #capital').val();
 	country.id = $('.myForm #idCountry').val();
 
-	if (country.id != "") {
-		
-		country.id = parseInt($('.myForm #idCountry').val());
+	if(valid()){
+		if (country.id != "") {
+			
+			country.id = parseInt($('.myForm #idCountry').val());
 
-		$.put("/update?id="+country.id, country,function(data) {
-			vide();
-			notification(data);
-			location.reload();
-		},'application/json');
-	} else {
-		$.post("/save", country).done(function(data) {
-			vide();
-			notification(data);
-			location.reload();
-		});
+			$.put("/update?id="+country.id, country,function(data) {
+				vide();
+				notification(data);
+				location.reload();
+			},'application/json');
+		} else {
+			$.post("/save", country).done(function(data) {
+				vide();
+				notification(data);
+				location.reload();
+			});
+		}
 	}
-
+	
 }
 
 vide();
@@ -31,6 +33,30 @@ function vide() {
 	$('.myForm #name').val('');
 	$('.myForm #capital').val('');
 	$('.myForm #idCountry').val('');
+}
+
+function valid() {
+	var ok = true;
+	var name = $('.myForm #name').val();
+	var capital = $('.myForm #capital').val();
+	
+	if(name==""){
+		$('.myForm .errorName').text('Le Nom ne peut pas etre vide');
+		ok = false;
+	}else{
+		ok = true;
+		$('.myForm .errorName').text('');
+	}
+	
+	if(capital==""){
+		$('.myForm .errorCapital').text('La Capital ne peut pas etre vide');
+		ok = false;
+	}else{
+		ok = true;
+		$('.myForm .errorCapital').text('');
+	}
+	
+	return ok;
 }
 
 function showDetails(personne) {

@@ -11,6 +11,13 @@ html , body{
  
  }
  
+ .error {
+	color: #f84545;
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: bold;
+ }
+ 
 .full-height{
  height:100%;
  }

@@ -12,7 +12,9 @@
 		<item value="/Users/mac/Desktop/Dev/campagne"/>
 	</list>
 	<list key="installedFeatures">
+		<item value="com.basistech.m2e.code.quality.pmd.feature:1.0.0.201705301746"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
+		<item value="net.sourceforge.pmd.eclipse:4.0.17.v20180801-1551"/>
 		<item value="org.aspectj:1.8.13.201803231521"/>
 		<item value="org.eclipse.ajdt:2.2.4.201803231521"/>
 		<item value="org.eclipse.cft.server.core.feature:1.2.3.v201709130027"/>
