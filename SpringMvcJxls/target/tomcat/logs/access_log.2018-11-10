@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:32:18 +0100] "GET /SpringMvcJxls HTTP/1.1" 302 - http-bio-8080-exec-2 0
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:32:18 +0100] "GET /SpringMvcJxls/ HTTP/1.1" 200 814 http-bio-8080-exec-3 164
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:32:18 +0100] "GET /SpringMvcJxls/webjars/jquery/2.2.3/jquery.min.js HTTP/1.1" 200 85694 http-bio-8080-exec-6 101
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:32:19 +0100] "GET /SpringMvcJxls/webjars/bootstrap/3.3.6/js/bootstrap.min.js HTTP/1.1" 200 36868 http-bio-8080-exec-5 169
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:32:19 +0100] "GET /SpringMvcJxls/webjars/bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1" 200 121260 http-bio-8080-exec-4 174
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:32:19 +0100] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-7 0
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:57:41 +0100] "GET /SpringMvcJxls/ HTTP/1.1" 200 1264 http-bio-8080-exec-1 143
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:57:42 +0100] "GET /SpringMvcJxls/webjars/jquery/2.2.3/jquery.min.js HTTP/1.1" 304 - http-bio-8080-exec-2 8
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:57:42 +0100] "GET /SpringMvcJxls/webjars/bootstrap/3.3.6/js/bootstrap.min.js HTTP/1.1" 304 - http-bio-8080-exec-3 10
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:57:42 +0100] "GET /SpringMvcJxls/webjars/bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1" 200 121260 http-bio-8080-exec-6 11
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:02:57:42 +0100] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-6 0
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:03:47:43 +0100] "GET /SpringMvcJxls/ HTTP/1.1" 200 1264 http-bio-8080-exec-1 167
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:03:47:44 +0100] "GET /SpringMvcJxls/webjars/bootstrap/3.3.6/css/bootstrap.min.css HTTP/1.1" 200 121260 http-bio-8080-exec-2 120
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:03:47:44 +0100] "GET /SpringMvcJxls/webjars/bootstrap/3.3.6/js/bootstrap.min.js HTTP/1.1" 200 36868 http-bio-8080-exec-4 105
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:03:47:44 +0100] "GET /SpringMvcJxls/webjars/jquery/2.2.3/jquery.min.js HTTP/1.1" 200 85694 http-bio-8080-exec-3 143
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:03:47:44 +0100] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-7 0
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:03:47:48 +0100] "GET /SpringMvcJxls/depart3 HTTP/1.1" 200 1264 http-bio-8080-exec-6 75
